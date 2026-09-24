@@ -39,8 +39,8 @@ or later**. Windows and Linux builds are not available yet.
 | **FFmpeg** | Every render, mix, master and export | `brew install ffmpeg` ([Homebrew](https://brew.sh)). The title bar says **No FFmpeg** until it is found. |
 | A coding CLI *(for director runs)* | Writes the script, the shots and the titles | Any one of those listed above, installed and signed in. The app finds it on its own. |
 | Provider keys *(optional)* | AI stills and motion | Settings → Providers. Gemini, Runway, fal. Skip them and everything local still works. |
-| Blender *(optional)* | The 3D route | Settings → Local rendering installs a pinned, checksum-verified build, or points to yours. |
-| Local voice *(optional)* | Narration | Settings → Local voice downloads it once. After that it works offline. The macOS voice is the fallback. |
+| Blender *(optional)* | The 3D route | Settings → Local tools installs a pinned, checksum-verified build, or points to yours. |
+| Local voice *(optional)* | Narration | Settings → Local tools downloads it once. After that it works offline. The macOS voice is the fallback. |
 
 Not sure where to start? Open the bundled **Harbor Light** sample. It's a finished
 12-shot production that exports a storyboard, captions and an edit list with no keys at
@@ -75,6 +75,11 @@ frames, and motion in the opening frames.
 
 Add cloud stills and motion on top with your own keys, and keep every take side by side.
 
+**Let your agent drive it.** Connect Claude Code, Codex, Cursor or any MCP client in
+**Settings → MCP access**. It can start a video from a brief, follow the director run,
+approve or send back each step, and collect the finished files while you watch in the app.
+Each connection has its own token, permissions and expiry, and you can revoke it any time.
+
 **Deliver.** A final MP4, a storyboard PDF, captions (SRT), an FCP7 XML edit list for
 your editor, and a manifest that records the provider, prompt and file hash of every
 asset.
@@ -95,12 +100,12 @@ The free tier never watermarks your footage. You paid your provider for those sh
 
 **Pro is one payment, not a subscription:** $29 for one Mac, $59 for three, $89 for five.
 It includes 12 months of updates, and the version you have keeps working forever after
-that. Buy and activate from **Settings → License**.
+that. Buy and activate from **Settings → License & updates**.
 
 ## Updates
 
 The app checks this repository for new versions and installs them from **Settings →
-Updates**. Every update is signed, and the app refuses one that isn't. Only published
+License & updates**. Every update is signed, and the app refuses one that isn't. Only published
 releases are served; drafts are not.
 
 ## Privacy
@@ -109,7 +114,7 @@ releases are served; drafts are not.
 - API keys stay in the macOS Keychain. They never go into a production folder, a
   manifest or an agent prompt.
 - Anonymous usage counts are off until you say yes, and can be turned off in
-  **Settings → Privacy**. They never include your scripts, prompts, footage, file names or
+  **Settings → General → Privacy**. They never include your scripts, prompts, footage, file names or
   keys.
 
 ## Troubleshooting
@@ -118,7 +123,7 @@ releases are served; drafts are not.
   **Open** → **Open** once. Later signed releases won't ask.
 - **No FFmpeg** in the title bar. Run `brew install ffmpeg`, then restart the app.
 - **The agent isn't listed.** Check that the CLI runs in Terminal and is signed in, then
-  press **Rescan Blender & CLIs** in Settings.
+  press **Rescan Blender & CLIs** in Settings → Local tools.
 
 ## Issues
 
